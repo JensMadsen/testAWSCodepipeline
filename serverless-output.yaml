@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  TestFunction:
+    Properties:
+      CodeUri: s3://onlawtestbucket/0bd64a9df15b24b985f7dba45c74e1d1
+      Environment:
+        Variables:
+          S3_BUCKET: onlawtestbucket
+      Handler: index.handler
+      Runtime: nodejs6.10
+    Type: AWS::Serverless::Function
+Transform: AWS::Serverless-2016-10-31
